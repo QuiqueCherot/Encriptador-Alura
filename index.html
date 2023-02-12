@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script type="text/javascript" src="/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#">
+                <img src="" alt="" class="header__logo">
+                <h1 class="header__titulo">Encriptador</h1>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="container hero__grid">
+            <div class="hero__encriptar">
+                <input type="text" name="texto" id="textoEncriptado" class="hero__input" placeholder="INGRESE SU TEXTO AQUÍ">
+                <div class="hero__btn">
+                    <label for="botonEncriptado" class="hero__label">Sólo letras minúsculas y sin acento.</label>
+                    <button class="hero__button" type="button" id="botonEncriptado">Encriptar</button>
+                    <button class="hero__button" type="button" id="botonDncriptado">Desencriptar</button>
+                </div>
+            </div>
+            <div class="hero__texto" id="hero__control">
+                <h3 class="hero__cta">
+                    <strong>Ningún mensaje fue encontrado</strong> 
+                    <br><em> Ingrese el mensaje que desee Encriptar o Desencriptar</em>                  
+                </h3>                
+                <textarea name="resultado" id="textoDesencriptado" cols="30" rows="10" class="hero__textarea"></textarea>
+                <button type="button" id="botonCopiar" class="hero__button hero__button-copy">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <h3 class="copyright">
+                Todos los derechos reservados.
+            </h3>
+        </div>
+    </footer>
+
+<script>
+    var btn=document.querySelector("#botonEncriptado");
+    btn.onclick = encriptar;
+
+    var btn_desencriptar=document.querySelector("#botonDncriptado");
+    btn_desencriptar.onclick=desencriptar;
+
+    var btn_copy =document.querySelector("#botonCopiar");
+    btn_copy.onclick=copiar;
+</script>
+</body>
+</html>
